@@ -1,17 +1,20 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const publications = [
     {
         title: "Revealing hidden bioimaging information by isotropic depolarization filtering",
         date: "2025",
         link: "https://doi.org/10.1016/j.optlastec.2025.112956",
-        details: "DOI: 10.1016/j.optlastec.2025.112956"
+        details: "DOI: 10.1016/j.optlastec.2025.112956",
+        internalLink: "/publications/bioimaging"
     },
     {
         title: "See It Before You Grab It: Deep Learning-based Action Anticipation in Basketball",
         date: "2025",
         link: "https://arxiv.org/abs/2512.15386",
-        details: "arXiv: 2512.15386"
+        details: "arXiv: 2512.15386",
+        internalLink: "/publications/basketball"
     }
 ];
 
@@ -38,12 +41,7 @@ const Publications = () => {
                         transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
                         className="group"
                     >
-                        <a
-                            href={pub.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block"
-                        >
+                        <Link to={pub.internalLink} className="block group">
                             <div className="flex justify-between items-start mb-2">
                                 <h4 className="text-xl md:text-2xl font-medium group-hover:text-text-muted transition-colors duration-300 max-w-2xl">
                                     {pub.title}
@@ -52,9 +50,9 @@ const Publications = () => {
                                     {pub.date}
                                 </span>
                             </div>
-                            <p className="text-sm text-text-muted group-hover:text-foreground/60 transition-colors duration-300">
-                                {pub.details}
-                            </p>
+                        </Link>
+                        <a href={pub.link} target="_blank" rel="noopener noreferrer" className="text-sm text-text-muted hover:underline mt-1 inline-block">
+                            Read full paper: {pub.details}
                         </a>
                     </motion.div>
                 ))}
