@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
+import Experience from "@/components/Experience";
 import LatestNews from "@/components/LatestNews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -92,6 +93,9 @@ const Index = () => {
       </div>
       <div className="snap-start snap-always min-h-screen w-full flex items-center">
         <AboutMe />
+      </div>
+      <div className="snap-start snap-always min-h-screen w-full flex items-center">
+        <Experience />
       </div>
       <div className="snap-start snap-always min-h-screen w-full flex items-center">
         <LatestNews />
