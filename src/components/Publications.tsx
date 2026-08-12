@@ -15,6 +15,13 @@ const publications = [
         link: "https://arxiv.org/abs/2512.15386",
         details: "arXiv: 2512.15386",
         internalLink: "/publications/basketball"
+    },
+    {
+        title: "TraVIS: Combining Player Tracking and Video for Football Action Spotting",
+        date: "2026",
+        link: "https://doi.org/10.1145/nnnnnnn.nnnnnnn",
+        details: "DOI: 10.1145/nnnnnnn.nnnnnnn",
+        internalLink: "/publications/football"
     }
 ];
 

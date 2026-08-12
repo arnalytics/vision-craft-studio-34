@@ -8,6 +8,7 @@ import News from "./pages/News";
 import Publications from "./pages/PublicationsPage";
 import BioimagingPublication from "./pages/BioimagingPublication";
 import BasketballPublication from "./pages/BasketballPublication";
+import FootballPublication from "./pages/FootballPublication";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/publications" element={<Publications />} />
           <Route path="/publications/bioimaging" element={<BioimagingPublication />} />
           <Route path="/publications/basketball" element={<BasketballPublication />} />
+          <Route path="/publications/football" element={<FootballPublication />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
